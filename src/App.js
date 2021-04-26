@@ -11,7 +11,7 @@ function App() {
     <div className="App m-5">
     <h1 > My Plan </h1>
   <TodoInput/>
-  <TodoList todos={filter===null? todos : todos.filter(todo=>todo.done===filter)} />
+  <TodoList todos={filter==="all" ? todos : todos.filter(todo=>todo.done===(filter==='true'? true:false))} />
 
     </div>
   );

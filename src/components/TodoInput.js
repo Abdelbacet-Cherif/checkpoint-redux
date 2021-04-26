@@ -31,7 +31,8 @@ function TodoInput() {
                 addTodo(
                     {
                         id:uuid(),
-                        name:name
+                        name:name,
+                        done:false,
                     }
                 )
             );
@@ -44,9 +45,9 @@ function TodoInput() {
               Dropdown button
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item"  onClick={handlefilter} >ALL</a>
-              <a class="dropdown-item" onClick={handlefilter} >UNDONE</a>
-              <a class="dropdown-item" onClick={handlefilter} >DONE</a>
+              <a class="dropdown-item"  id="all" onClick={handlefilter} >ALL</a>
+              <a class="dropdown-item" id="false" onClick={handlefilter} >UNDONE</a>
+              <a class="dropdown-item"  id="true" onClick={handlefilter} >DONE</a>
               </div>
           </div>
             </div>
